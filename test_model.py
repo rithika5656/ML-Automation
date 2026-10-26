@@ -3,4 +3,5 @@ from train_model import create_model
 
 def test_model():
     model = create_model()
-    assert abs(model.predict([[4]])[0] - 8) < 0.01
+    prediction = model.predict([[4]])
+    assert abs(prediction[0] - 8) < 0.01
